@@ -23,4 +23,15 @@ createUser({ name: 'prince', isPaid: false, email: 'nkuruprinces@gmail.com' });
 function createCourse() {
     return { name: 'biology', price: 300 };
 }
+let arr = [1, 2, 3];
+let user2 = [1, 'prince'];
+var Response;
+(function (Response) {
+    Response[Response["No"] = 0] = "No";
+    Response[Response["Yes"] = 1] = "Yes";
+})(Response || (Response = {}));
+function respond(recipient, message) {
+    console.log(`${recipient}: ${message}`);
+}
+respond("Alice", Response.Yes);
 //# sourceMappingURL=intro.js.map
