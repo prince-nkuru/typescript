@@ -87,12 +87,44 @@ respond("Alice", Response.Yes); // Output: Alice: 1;
 
 
 // OBJECTS AGAIN
-
+/*
 let employee:{
   readonly id:number,
   name:string,
   retire: (date:Date) => void
 } = {
+  id: 123,
+  name:'prince',
+  retire: (date:Date) => {
+    return date;
+  }
+}
+console.log(employee)
+
+*/
+
+
+
+
+// ADVANCED TYPESCRIPT
+
+// YOU WILL LEARN :
+//TYPE ALIASES
+//UNION AND INTERSECTIONS
+//TYPE NARROWING
+//NULLABLE TYPE
+//UNKNOWN TYPE
+//NEVER TYPE
+
+// ALIASES
+
+type Employee = {
+  readonly id:number,
+  name:string,
+  retire: (date:Date) => void
+}
+
+let employee: Employee = {
   id: 123,
   name:'prince',
   retire: (date:Date) => {
