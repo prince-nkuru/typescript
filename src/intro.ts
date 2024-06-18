@@ -116,7 +116,7 @@ console.log(employee)
 //UNKNOWN TYPE
 //NEVER TYPE
 
-// ALIASES
+// ALIASES. we used to avoid re-using code.
 
 type Employee = {
   readonly id:number,
@@ -133,6 +133,46 @@ let employee: Employee = {
 }
 console.log(employee)
 
+ //UNION. WE USE TO GIVE DIFFERENT TYPE OF PARAMETER
+
+ function kgToLbs(weigth:number|string):number{
+  // narrowing bcz we don not kwow value of wigth
+  if (typeof weigth === 'number'){
+    return weigth * 2.2;
+  }else {
+    return parseInt(weigth) * 2.2
+  }
+ }
+ console.log(kgToLbs);
+
+
+ // INTERSECTION . WE USE IT TO COMBINE 
+
+  type Draggable = {
+     Drag : () => void
+  }
+
+  type Resizable = {
+    size : () => void
+  }
+
+  type UIwidget = Draggable & Resizable;
+
+  let textBox : UIwidget = {
+    Drag : () => {},
+    size : () => {}
+  }
+  textBox.Drag;
+
+
+  // LITERAL TYPE. CAN BE ANY VALUE 
+// EXAMPLES
+ type Quantity = 50 |100;
+
+ let quantity : Quantity = 100;
+ console.log (quantity);
+
+ // NULLABLE TYPE
 
 
 
