@@ -175,6 +175,28 @@ console.log(employee)
  // NULLABLE TYPE
 
 
+ function greet(name:string | null|undefined){
+  if (name)
+    console.log(name.toUpperCase)
+  else
+  console.log('Hola')
+ }
+
+ greet(null)          // ALL IS POSSIBLE 
+ greet(undefined)
+
+
+
+   //OPTIONAL CHAINING
+    type customer = {
+      birthday : Date
+    }
+
+    function getCUstomer(id :number):customer | null {
+      return id === 0? null : {birthday : new Date()}
+    }
+
+    getCUstomer(2)
 
 
 export{}
