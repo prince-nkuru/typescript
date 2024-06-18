@@ -52,6 +52,18 @@ function createCourse():{name:string, price:number}{
 }
 
 
+// arrays
+
+let arr:number[] = [1,2,3]
+// arr.forEach(n => n.toString)
+
+//tuples
+
+/*In TypeScript, tuples are a special type of array where the type of elements is known and fixed. Each element in a tuple can have a different type, unlike arrays where all elements are typically of the same type. Tuples provide a way to group a fixed number of elements together with specific types.*/
+
+let user2 : [number,string] = [1,'prince'];
+
+
 
 
 
