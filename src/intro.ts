@@ -1,3 +1,8 @@
+let user = {name: 'prince', age: 24}
+
+console.log('prince');
+console.log(user.name);
+
 let greetings: string = 'hello prince'
 
 // number
@@ -35,9 +40,12 @@ heros.map((hero):string => {  //good practice
 
 //objects
 
-function createUser({name:string, isPaid:boolean}){}
+function createUser({}){}
 
-createUser({name:'prince', isPaid:false});
+//let newUser = {name:'prince', isPaid:false, email:'nkuruprinces@gmail.com'} 
+
+//createUser(newUser);
+createUser({name:'prince', isPaid:false, email:'nkuruprinces@gmail.com'} )
 
 function createCourse():{name:string, price:number}{
   return {name:'biology', price: 300}
