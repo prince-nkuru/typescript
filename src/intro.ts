@@ -60,6 +60,12 @@ createCourse()
 let arr:number[] = [1,2,3]
 arr.forEach(n => n.toString)
 
+/* let arr: number[][] = [
+[1,2,3,4],
+[5,6,7,8]
+]
+*/
+
 //tuples
 
 /*In TypeScript, tuples are a special type of array where the type of elements is known and fixed. Each element in a tuple can have a different type, unlike arrays where all elements are typically of the same type. Tuples provide a way to group a fixed number of elements together with specific types.*/
@@ -144,6 +150,29 @@ console.log(employee)
   }
  }
  console.log(kgToLbs);
+//************************************************************************ */
+ type User = {
+  name:string,
+  id : number
+ }
+
+ type Admin = {
+  userName: string,
+  id: number
+ }
+
+ let prince : User | Admin = {
+  name :"prince",
+  id: 123
+ }
+ console.log(prince.name)
+
+ //if you want to return arr with combination of number and string you can use this
+
+ let arr4 :(string | number)[] = [1,2,3,'4']
+ arr4[2];
+
+ //************************************************************************ */
 
 
  // INTERSECTION . WE USE IT TO COMBINE 
@@ -188,15 +217,20 @@ console.log(employee)
 
 
    //OPTIONAL CHAINING
-    type customer = {
-      birthday : Date
+    type Customer = {
+      birthday? : Date
     }
 
-    function getCUstomer(id :number):customer | null {
+    function getCUstomer(id :number):Customer | null | undefined {
       return id === 0? null : {birthday : new Date()}
     }
 
-    getCUstomer(2)
+    let customer = getCUstomer(2);
+    // optional property access  operator
+
+    // optional chaining is used here by the use of ?. it only work if customer is neither null nor undefined
+    console.log(customer?.birthday)
+    console.log(customer?.birthday?.getFullYear)
 
 
 export{}

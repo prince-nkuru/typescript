@@ -1,4 +1,5 @@
 "use strict";
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 let user = { name: 'prince', age: 24 };
 console.log('prince');
@@ -59,9 +60,32 @@ function kgToLbs(weigth) {
     }
 }
 console.log(kgToLbs);
+let prince = {
+    name: "prince",
+    id: 123
+};
+console.log(prince.name);
+let arr4 = [1, 2, 3, '4'];
+arr4[2];
 let textBox = {
     Drag: () => { },
     size: () => { }
 };
 textBox.Drag;
+let quantity = 100;
+console.log(quantity);
+function greet(name) {
+    if (name)
+        console.log(name.toUpperCase);
+    else
+        console.log('Hola');
+}
+greet(null);
+greet(undefined);
+function getCUstomer(id) {
+    return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCUstomer(2);
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthday);
+console.log((_a = customer === null || customer === void 0 ? void 0 : customer.birthday) === null || _a === void 0 ? void 0 : _a.getFullYear);
 //# sourceMappingURL=intro.js.map
