@@ -83,7 +83,7 @@ user2.push('2') // this is possible
 
 // default value for first element is 0, then 1 then 2 ...  if you change to 10, second is incremented by 1
 
-enum Response {
+const enum Response {             // best practice to use const for getting fewer javascript code
   No = 0,
   Yes = 1
 }
