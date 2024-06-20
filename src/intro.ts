@@ -70,11 +70,18 @@ arr.forEach(n => n.toString)
 
 /*In TypeScript, tuples are a special type of array where the type of elements is known and fixed. Each element in a tuple can have a different type, unlike arrays where all elements are typically of the same type. Tuples provide a way to group a fixed number of elements together with specific types.*/
 
+
+// in tuples, u can use push, pop method.... and it work regardles of what u have set//
+
 let user2 : [number,string] = [1,'prince'];
 console.log(user2);
 
+user2.push('2') // this is possible
+
 // enums 
 //we use pascal case . every start letter is capital
+
+// default value for first element is 0, then 1 then 2 ...  if you change to 10, second is incremented by 1
 
 enum Response {
   No = 0,
@@ -149,7 +156,7 @@ console.log(employee)
     return parseInt(weigth) * 2.2
   }
  }
- console.log(kgToLbs);
+ console.log(kgToLbs(100));
 //************************************************************************ */
  type User = {
   name:string,
