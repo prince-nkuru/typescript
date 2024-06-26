@@ -245,17 +245,31 @@ console.log(employee);
     /*****************************************************************************/
    
     interface user{
-      readonly dbID: number,
+      readonly dbID: number,  // you can not change the value if it readonly
       email: string,
       userId:number,
-      googleId?: number
+      googleId?: number,
+      startTrial():string
     }
 
-    const princes:user = {
+    interface user{             //this is possible with interface not for type.
+      githubToken:string
+    }
+
+    interface admin extends user {       // this also is possible
+      role: 'admin'|'learner'
+    }
+
+    const princes: admin/*user*/ = {
       dbID : 22,
       email : 'nkuruprinces@gamil.com',
       userId: 12,
       // you can fill googleId or not because of optional chaining
+      startTrial:()=>{
+        return'started'
+      },
+      githubToken: 'github',
+      role: 'learner'
     }
     console.log(princes)
 
