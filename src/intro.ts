@@ -1,20 +1,20 @@
-let user = {name: 'prince', age: 24}
+let user = {name: 'prince', age: 24};
 
 console.log('prince');
-console.log(user.name);
+console.log(user.name);                
 
 let greetings: string = 'hello prince';
-console.log(greetings)
+console.log(greetings);
 
-// number
+// number//
 
 let userId: number = 1234; // not necessarily to use number and string keyword
 console.log(userId)
 // function
 
 function getHero(num: number): number{  // good to put keyword
-return  num + 2
-//return 'hello' this is not allowed
+return  num + 2;
+//return 'hello' this is not allowed.
 }
 getHero(4)
 
@@ -144,12 +144,12 @@ let employee: Employee = {
     return date;
   }
 }
-console.log(employee)
+console.log(employee);
 
  //UNION. WE USE TO GIVE DIFFERENT TYPE OF PARAMETER
 
  function kgToLbs(weigth:number|string):number{
-  // narrowing bcz we don not kwow value of wigth
+  // narrowing bcz we don not kwow value of weigth
   if (typeof weigth === 'number'){
     return weigth * 2.2;
   }else {
@@ -237,7 +237,26 @@ console.log(employee)
 
     // optional chaining is used here by the use of ?. it only work if customer is neither null nor undefined
     console.log(customer?.birthday)
-    console.log(customer?.birthday?.getFullYear)
+    console.log(customer?.birthday?.getFullYear);
 
+
+    /*****************************************************************************/
+                          // INTERFACE//
+    /*****************************************************************************/
+   
+    interface user{
+      readonly dbID: number,
+      email: string,
+      userId:number,
+      googleId?: number
+    }
+
+    const princes:user = {
+      dbID : 22,
+      email : 'nkuruprinces@gamil.com',
+      userId: 12,
+      // you can fill googleId or not because of optional chaining
+    }
+    console.log(princes)
 
 export{}
