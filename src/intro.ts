@@ -295,7 +295,7 @@ console.log(employee);
               return this._courseCount
             }
 
-            set courseCount(courseNum){
+            set courseCount(courseNum){              // for setter there is no return type: dont annotate
               if (courseNum <= 1){
                 throw new Error('courseNum should more than 1')
               }
