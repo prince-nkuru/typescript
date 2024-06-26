@@ -273,4 +273,20 @@ console.log(employee);
     }
     console.log(princes)
 
+ /*****************************************************************************/
+                          // CLASSES//
+    /*****************************************************************************/
+
+    class userx {
+            email:string
+            name:string
+            constructor(email:string, name:string){
+               this.email = email,
+               this.name = name
+            }
+    }
+
+    const nkuru = new userx('nkuru@gmail.com', 'prince');
+    console.log(nkuru);
+
 export{}
