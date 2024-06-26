@@ -278,15 +278,34 @@ console.log(employee);
     /*****************************************************************************/
 
     class userx {
+      private _courseCount:number = 1
             email:string
             name:string
+            city :string = 'kigali'  // this is possible
             constructor(email:string, name:string){
                this.email = email,
                this.name = name
+            }
+
+            get getApple():string{
+              return `apple${this.email}`
+            }
+
+            get courseCount():number{
+              return this._courseCount
+            }
+
+            set courseCount(courseNum){
+              if (courseNum <= 1){
+                throw new Error('courseNum should more than 1')
+              }
+              this._courseCount = courseNum;
             }
     }
 
     const nkuru = new userx('nkuru@gmail.com', 'prince');
     console.log(nkuru);
+
+    nkuru.city = 'kigali' // this is possible
 
 export{}
