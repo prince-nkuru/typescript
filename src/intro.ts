@@ -273,6 +273,32 @@ console.log(employee);
     }
     console.log(princes)
 
+    // more about interface
+
+    interface TakePhoto {
+      burst:number,
+      cameraMode:string,
+      filter:string
+    }
+
+    class instagram implements TakePhoto{
+      constructor(
+        burst:number,
+      cameraMode:string,
+      filter:string
+      ){
+        burst = 1,
+        cameraMode = 'pixel',
+        filter = 'black'
+      }
+      burst=1 ;
+      cameraMode = 'hey';
+      filter = 'string';
+      
+    }
+    const app = new instagram(1,'str','str')
+    console.log(app)
+
  /*****************************************************************************/
                           // CLASSES//
     /*****************************************************************************/
@@ -307,5 +333,7 @@ console.log(employee);
     console.log(nkuru);
 
     nkuru.city = 'kigali' // this is possible
+
+    //private keypword means that property must be accessed in that class and any other class that inherit that class. it is different to private where you can access only on that class
 
 export{}
