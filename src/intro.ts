@@ -322,6 +322,21 @@ console.log(employee);
     }
     getArea({kind : 'circle', radius: 4})
 
+    // using switch
+
+    // function getArea(shape: Shape) {
+    //   switch (shape.kind) {
+    //     case "circle":
+    //       return Math.PI * shape.radius ** 2;
+                            
+    // (parameter) shape: Circle
+    //     case "square":
+    //       return shape.sideLength ** 2;
+                  
+    // (parameter) shape: Square
+    //   }
+    // }
+
  /*****************************************************************************/
                           // CLASSES//
     /*****************************************************************************/
