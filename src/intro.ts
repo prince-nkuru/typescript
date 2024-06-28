@@ -282,6 +282,10 @@ console.log(employee);
     }
 
     class instagram implements TakePhoto{
+
+      burst=1 ;
+      cameraMode = 'hey';
+      filter = 'string';
       constructor(
         burst:number,
       cameraMode:string,
@@ -291,13 +295,32 @@ console.log(employee);
         cameraMode = 'pixel',
         filter = 'black'
       }
-      burst=1 ;
-      cameraMode = 'hey';
-      filter = 'string';
+      
       
     }
     const app = new instagram(1,'str','str')
     console.log(app)
+  ///////////////////////////////
+
+    interface Square{
+      kind:'square',
+      sideLength:number
+    }
+
+    interface Circle {
+      kind: 'circle',
+      radius: number
+    }
+
+    type Shape = Square | Circle;
+
+    function getArea(shape:Shape){
+      if (shape.kind === 'circle'){
+        return Math.PI * shape.radius ** 2
+      }
+      return Math.PI * shape.sideLength ** 2
+    }
+    getArea({kind : 'circle', radius: 4})
 
  /*****************************************************************************/
                           // CLASSES//
@@ -334,6 +357,6 @@ console.log(employee);
 
     nkuru.city = 'kigali' // this is possible
 
-    //private keypword means that property must be accessed in that class and any other class that inherit that class. it is different to private where you can access only on that class
+    //protected keypword means that property must be accessed in that class and any other class that inherit that class. it is different to private where you can access only on that class
 
 export{}
