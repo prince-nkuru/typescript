@@ -386,4 +386,14 @@ console.log(employee);
               return arg;
             }
             func;
+             ////////////////////
+            interface bottle{
+              brand:string, 
+              type:number
+            }
+
+            function make<bottle>(val:bottle):bottle{
+                 return val;
+            }
+            make<bottle>({brand:'nile', type:234});
 export{}
