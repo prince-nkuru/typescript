@@ -374,4 +374,16 @@ console.log(employee);
 
     //protected keypword means that property must be accessed in that class and any other class that inherit that class. it is different to private where you can access only on that class
 
+    /***************************************************************************************************/
+                                         // GENERICS
+     /***************************************************************************************************/
+            const score:Array<number> = [];
+            const names :Array<string> = [];
+            console.log(score)
+            console.log(names)
+
+            function func<type>(arg:type):type{
+              return arg;
+            }
+            func;
 export{}
